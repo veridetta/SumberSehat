@@ -27,6 +27,7 @@ public class RegisterActivity extends AppCompatActivity {
     EditText tx_nama, tx_umur, tx_email, tx_password;
     Spinner sp_jk;
     Button btnRegister, btnLogin;
+    String role = "user";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,7 +63,7 @@ public class RegisterActivity extends AppCompatActivity {
             String jk = sp_jk.getSelectedItem().toString();
             //panggil fungsi utama builder database
             DBUser dbUser = DBUser.getInstance(this);
-            dbUser.userDao().insertUser(new UserModel(nama, email, password, jk, umur));
+            dbUser.userDao().insertUser(new UserModel(nama, email, password, jk, umur, role));
             Toast.makeText(this, "Berhasil Register", Toast.LENGTH_SHORT).show();
             //Intent
             Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);

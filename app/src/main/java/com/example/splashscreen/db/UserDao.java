@@ -19,6 +19,10 @@ public interface UserDao {
     @Query("SELECT * FROM "+user_table+" WHERE email = :email AND password = :password")
     UserModel getUser(String email, String password);
 
+    //untuk mengecek role admin sudah ada atau belum?
+    @Query("SELECT * FROM "+user_table+" WHERE role = :role")
+    UserModel getAdmin(String role);
+
     //menginput data
     @Insert
     void insertUser(UserModel userModel);

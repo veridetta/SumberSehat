@@ -3,4 +3,7 @@
     <string name="judul_aplikasi">APOTEK SEGAR SEHAT</string>
     <string name="register_title">Register</string>
     <string name="welcome_title">Selamat Datang</string>
+    <string name="detail_layanan">Silahkan pilih penyakit yang Anda idap dan kai akan membantu anda</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -19,21 +19,26 @@ public class UserModel {
     public String gender;
     @ColumnInfo(name = "age")
     public String age;
+    @ColumnInfo(name = "role")
+    public String role;
 
-    public UserModel(int id, String nama, String email, String password, String gender, String age){
+
+    public UserModel(int id, String nama, String email, String password, String gender, String age, String role){
         this.id = id;
         this.nama = nama;
         this.email = email;
         this.password = password;
         this.gender = gender;
         this.age = age;
+        this.role =  role;
     }
     @Ignore
-    public UserModel(String nama, String email, String password, String gender, String age){
+    public UserModel(String nama, String email, String password, String gender, String age, String role){
         this.nama = nama;
         this.email = email;
         this.password = password;
         this.gender = gender;
         this.age = age;
+        this.role = role;
     }
 }
