@@ -2,7 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     tools:context=".ui.user.HomeFragment">
 
     <LinearLayout
@@ -38,6 +38,27 @@
             android:layout_marginTop="@dimen/_6sdp"
             android:weightSum="4">
             <LinearLayout
+                android:id="@+id/kat_asma"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:background="@drawable/border_image"
+                    android:src="@drawable/inhaler"
+                    android:padding="@dimen/_4sdp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Asma"
+                    android:gravity="center"
+                    android:textSize="@dimen/_12sdp"/>
+            </LinearLayout>
+            <LinearLayout
                 android:id="@+id/kat_batuk"
                 android:layout_width="1dp"
                 android:layout_height="wrap_content"
@@ -47,7 +68,7 @@
                 <ImageView
                     android:layout_width="@dimen/_50sdp"
                     android:layout_height="@dimen/_50sdp"
-                    android:background="@color/blue_700"/>
+                    android:background="@drawable/cough"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -56,7 +77,7 @@
                     android:textSize="@dimen/_12sdp"/>
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/kat_mag"
+                android:id="@+id/kat_demam"
                 android:layout_width="1dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -65,16 +86,16 @@
                 <ImageView
                     android:layout_width="@dimen/_50sdp"
                     android:layout_height="@dimen/_50sdp"
-                    android:background="@color/blue_700"/>
+                    android:background="@drawable/sick"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Maag"
+                    android:text="Demam"
                     android:gravity="center"
                     android:textSize="@dimen/_12sdp"/>
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/kat_jantung"
+                android:id="@+id/kat_sakit_kepala"
                 android:layout_width="1dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -83,29 +104,11 @@
                 <ImageView
                     android:layout_width="@dimen/_50sdp"
                     android:layout_height="@dimen/_50sdp"
-                    android:background="@color/blue_700"/>
+                    android:background="@drawable/pain"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Jantung"
-                    android:gravity="center"
-                    android:textSize="@dimen/_12sdp"/>
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/kat_konstipasi"
-                android:layout_width="1dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingHorizontal="@dimen/_10sdp"
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_width="@dimen/_50sdp"
-                    android:layout_height="@dimen/_50sdp"
-                    android:background="@color/blue_700"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Konstipasi"
+                    android:text="Sakit Kepala"
                     android:gravity="center"
                     android:textSize="@dimen/_12sdp"/>
             </LinearLayout>

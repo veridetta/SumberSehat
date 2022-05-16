@@ -5,21 +5,27 @@
       <map>
         <entry key="..\:/Users/ROG STRIX/AndroidStudioProjects/splashScreen/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/ROG STRIX/AndroidStudioProjects/splashScreen/app/src/main/res/layout/activity_main.xml" value="0.2542991141219385" />
+        <entry key="..\:/Users/smile/Downloads/splashScreen/splashScreen/app/src/main/res/drawable/border_image.xml" value="0.1335" />
+        <entry key="..\:/Users/smile/Downloads/splashScreen/splashScreen/app/src/main/res/drawable/nav_style.xml" value="0.1335" />
         <entry key="..\:/Users/smile/Downloads/splashScreen/splashScreen/app/src/main/res/layout/activity_admin.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/smile/Downloads/splashScreen/splashScreen/app/src/main/res/layout/activity_login.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/smile/Downloads/splashScreen/splashScreen/app/src/main/res/layout/activity_main2.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/smile/Downloads/splashScreen/splashScreen/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/smile/Downloads/splashScreen/splashScreen/app/src/main/res/layout/activity_main2.xml" value="0.1" />
+        <entry key="..\:/Users/smile/Downloads/splashScreen/splashScreen/app/src/main/res/layout/activity_produk.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/smile/Downloads/splashScreen/splashScreen/app/src/main/res/layout/activity_register.xml" value="0.1" />
         <entry key="..\:/Users/smile/Downloads/splashScreen/splashScreen/app/src/main/res/layout/fragment_admin.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/smile/Downloads/splashScreen/splashScreen/app/src/main/res/layout/fragment_akun.xml" value="0.16145833333333334" />
         <entry key="..\:/Users/smile/Downloads/splashScreen/splashScreen/app/src/main/res/layout/fragment_akun_a.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/smile/Downloads/splashScreen/splashScreen/app/src/main/res/layout/fragment_home.xml" value="0.17552083333333332" />
-        <entry key="..\:/Users/smile/Downloads/splashScreen/splashScreen/app/src/main/res/layout/fragment_keranjang.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/smile/Downloads/splashScreen/splashScreen/app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/Users/smile/Downloads/splashScreen/splashScreen/app/src/main/res/layout/fragment_keranjang.xml" value="0.1" />
         <entry key="..\:/Users/smile/Downloads/splashScreen/splashScreen/app/src/main/res/layout/fragment_pesanan.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/smile/Downloads/splashScreen/splashScreen/app/src/main/res/layout/fragment_produk.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/smile/Downloads/splashScreen/splashScreen/app/src/main/res/layout/fragment_produk_user.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/smile/Downloads/splashScreen/splashScreen/app/src/main/res/layout/item_keranjang.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/smile/Downloads/splashScreen/splashScreen/app/src/main/res/layout/item_pesanan.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/smile/Downloads/splashScreen/splashScreen/app/src/main/res/layout/item_produk.xml" value="0.17552083333333332" />
         <entry key="..\:/Users/smile/Downloads/splashScreen/splashScreen/app/src/main/res/layout/item_produk_admin.xml" value="0.17552083333333332" />
+        <entry key="..\:/Users/smile/Downloads/splashScreen/splashScreen/app/src/main/res/menu/bottom_nav.xml" value="0.17552083333333332" />
       </map>
     </option>
   </component>

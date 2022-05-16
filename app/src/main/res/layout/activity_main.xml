@@ -7,12 +7,6 @@
     android:background="@color/green_300"
     tools:context=".SplashActivity">
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </RelativeLayout>
 
     <ImageView
         android:layout_width="257dp"

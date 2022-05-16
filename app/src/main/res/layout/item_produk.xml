@@ -4,21 +4,20 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
-    android:padding="@dimen/_12sdp"
     android:weightSum="10">
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardElevation="@dimen/_6sdp"
+        app:cardElevation="@dimen/_2sdp"
         app:cardCornerRadius="@dimen/_8sdp"
         app:cardUseCompatPadding="true"
-        app:cardMaxElevation="@dimen/_7sdp">
+        app:cardMaxElevation="@dimen/_3sdp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <ImageView
-                android:id="@+id/img_produk"
+                android:id="@+id/img_obat"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_100sdp"
                 android:background="@color/green_500"/>
@@ -51,9 +50,10 @@
                 <com.google.android.material.button.MaterialButton
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Tambahan ke Keranjang"
-                    app:icon="@color/green_500"
-                    app:iconSize="@dimen/_12sdp"
+                    app:icon="@drawable/shopping_cart"
+                    android:textAlignment="textStart"
+                    app:iconSize="@dimen/_15sdp"
+                    android:text="Add to cart"
                     android:backgroundTint="@color/blue_700"/>
             </LinearLayout>
         </LinearLayout>

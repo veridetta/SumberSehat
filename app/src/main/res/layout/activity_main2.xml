@@ -9,13 +9,20 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <androidx.core.widget.NestedScrollView
+        <FrameLayout
+            android:id="@+id/frameLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <FrameLayout
-                android:id="@+id/frameLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-        </androidx.core.widget.NestedScrollView>
+            android:layout_height="match_parent"
+            android:layout_above="@id/btm_nav"
+            android:paddingBottom="@dimen/_50sdp"/>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/btm_nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/green_800"
+            app:itemTextColor="@drawable/nav_style"
+            app:itemIconTint="@drawable/nav_style"
+            />
     </RelativeLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
