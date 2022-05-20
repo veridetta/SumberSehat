@@ -56,6 +56,8 @@ public class LoginActivity extends AppCompatActivity {
                     SharedPreferences sharedPreferences = getSharedPreferences("user", MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString("email", email);
+                    editor.putString("name", user.nama);
+                    editor.putString("jk", user.gender);
                     editor.putString("role", user.role);
                     editor.putInt("id_user", user.id);
                     editor.putBoolean("isLogin", true);
@@ -65,6 +67,15 @@ public class LoginActivity extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 }else{
+                    SharedPreferences sharedPreferences = getSharedPreferences("user", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("email", email);
+                    editor.putString("name", user.nama);
+                    editor.putString("jk", user.gender);
+                    editor.putString("role", user.role);
+                    editor.putInt("id_user", user.id);
+                    editor.putBoolean("isLogin", false);
+                    editor.apply();
                     Intent intent = new Intent(LoginActivity.this, AdminActivity.class);
                     startActivity(intent);
                     finish();

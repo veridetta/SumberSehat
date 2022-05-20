@@ -16,9 +16,13 @@ public interface ObatDao {
     @Query("SELECT * FROM "+obat_table)
     ObatModel getObatAll();
 
-    //mengambil data berdasarkan id_obat
+    //mengambil data berdasarkan kategori
     @Query("SELECT * FROM "+obat_table+" WHERE kategori = :kategori")
     List<ObatModel> getObat(String kategori);
+
+    //mengambil data berdasarkan id
+    @Query("SELECT * FROM "+obat_table+" WHERE id = :id")
+    ObatModel getObatbyId(Integer id);
 
     //menginput data
     @Insert

@@ -17,15 +17,15 @@ public interface KeranjangDao {
 
     //mengambil data berdasarkan id_keranjang
     @Query("SELECT * FROM "+keranjang_table+" WHERE id_user = :id_user")
-    KeranjangModel getKeranjang(String id_user);
+    List<KeranjangModel> getKeranjang(String id_user);
 
     //menginput data
     @Insert
     void insertObat(KeranjangModel keranjangModel);
     //mengupdate data
-    @Update
-    void updateObat(KeranjangModel keranjangModel);
+    @Query("UPDATE "+keranjang_table+" set kuantitas=:kuantitas WHERE id = :id  ")
+    void updateKeranjang(String id, String kuantitas );
    //menghapus data
-    @Delete
-    void deleteObat(KeranjangModel keranjangModel);
+   @Query("DELETE from "+keranjang_table+" WHERE id = :id  ")
+   void deleteKeranjang(String id );
 }

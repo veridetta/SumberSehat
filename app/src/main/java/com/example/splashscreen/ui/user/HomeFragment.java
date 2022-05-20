@@ -67,31 +67,41 @@ public class HomeFragment extends Fragment {
     public void moveActivity(View view) {
         //get id dari view
         int id = view.getId();
-        Intent intent;
+        Fragment fragment = new ProdukFragmentUser();
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frameLayout, fragment);
+        fragmentTransaction.addToBackStack(null);
+        Bundle bundle = new Bundle();
         switch (id){
             case R.id.kat_asma:
-                 intent = new Intent(getActivity(), ProdukActivity.class);
-                 intent.putExtra("kategori", "asma");
-                 getActivity().finish();
+                //put args
+                bundle.putString("kategori", "asma");
+                fragment.setArguments(bundle);
+                // intent = new Intent(getActivity(), ProdukActivity.class);
+               //  intent.putExtra("kategori", "asma");
                  break;
             case R.id.kat_batuk:
-                intent = new Intent(getActivity(), ProdukActivity.class);
-                intent.putExtra("kategori", "batuk");
+                bundle.putString("kategori", "batuk");
+                fragment.setArguments(bundle);
+               // intent = new Intent(getActivity(), ProdukActivity.class);
+                //intent.putExtra("kategori", "batuk");
                 break;
             case R.id.kat_demam:
-                intent = new Intent(getActivity(), ProdukActivity.class);
-                intent.putExtra("kategori", "demam");
+                //intent = new Intent(getActivity(), ProdukActivity.class);
+                //intent.putExtra("kategori", "demam");
                 break;
             case R.id.kat_sakit_kepala:
-                intent = new Intent(getActivity(), ProdukActivity.class);
-                intent.putExtra("kategori", "sakit_kepala");
+                //intent = new Intent(getActivity(), ProdukActivity.class);
+                //intent.putExtra("kategori", "sakit_kepala");
                 break;
             default:
-                intent = new Intent(getActivity(), ProdukActivity.class);
-                intent.putExtra("kategori", "batuk");
+                //intent = new Intent(getActivity(), ProdukActivity.class);
+                //intent.putExtra("kategori", "batuk");
                 break;
         }
-        startActivity(intent);
+        fragmentTransaction.commit();
+        //startActivity(intent);
 
     }
 }

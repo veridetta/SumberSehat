@@ -13,7 +13,7 @@ public interface PesananDao {
     //mengambil data user
     String pesanan_table = "pesanan_table";
     @Query("SELECT * FROM "+pesanan_table)
-    List<ObatModel> getPesananAll();
+    List<PesananModel> getPesananAll();
 
     //mengambil data berdasarkan id_obat
     @Query("SELECT * FROM "+pesanan_table+" WHERE id_user = :id_user")
@@ -21,11 +21,11 @@ public interface PesananDao {
 
     //menginput data
     @Insert
-    void insertObat(ObatModel obatModel);
+    void insertPesanan(PesananModel pesananModel);
     //mengupdate data
     @Update
-    void updateObat(ObatModel obatModel);
+    void updatePesanan(PesananModel pesananModel);
    //menghapus data
     @Delete
-    void deleteObat(ObatModel obatModel);
+    void deletePesanan(PesananModel pesananModel);
 }

@@ -23,6 +23,9 @@ public interface UserDao {
     @Query("SELECT * FROM "+user_table+" WHERE role = :role")
     UserModel getAdmin(String role);
 
+    @Query("SELECT * FROM "+user_table+" WHERE id = :id")
+    UserModel getUserById(Integer id);
+
     //menginput data
     @Insert
     void insertUser(UserModel userModel);

@@ -1,12 +1,17 @@
 package com.example.splashscreen.ui.user.adapter;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,6 +19,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.splashscreen.R;
+import com.example.splashscreen.db.DBUser;
+import com.example.splashscreen.db.KeranjangModel;
 import com.example.splashscreen.db.ObatModel;
 
 import java.text.DecimalFormat;
@@ -75,8 +82,20 @@ public class ObatAdapter extends RecyclerView.Adapter<ObatAdapter.MyViewHolder> 
         holder.tvNama.setText(datalist.get(position).nama);
         holder.tvHarga.setText(rupiah(Double.parseDouble(datalist.get(position).harga)));
         holder.tvDeskripsi.setText(datalist.get(position).deskripsi);
-        Glide.with(context).load("https://miro.medium.com/focal/92/92/50/50/1*QPllkvDm_lXdVPekf6Rugw.jpeg")
+        Glide.with(context).load(datalist.get(position).gambar)
                 .apply(RequestOptions.centerCropTransform()).into(holder.imgObat);
+        SharedPreferences sharedPreferences = context.getSharedPreferences("user", MODE_PRIVATE);
+        Integer id_user = sharedPreferences.getInt("id_user", 0);
+        String idObat = String.valueOf(datalist.get(position).id);
+        holder.btnCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DBUser dbUser = DBUser.getInstance(context);
+                dbUser.keranjangDao().insertObat(new KeranjangModel(idObat,id_user.toString(),
+                        "1",datalist.get(position).harga));
+                Toast.makeText(context, "Berhasil ditambahkan ke keranjang", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
@@ -93,13 +112,14 @@ public class ObatAdapter extends RecyclerView.Adapter<ObatAdapter.MyViewHolder> 
 
         TextView tvNama, tvHarga, tvDeskripsi;
         ImageView imgObat;
-
+        Button btnCart;
         public MyViewHolder(View view) {
             super(view);
             tvNama = view.findViewById(R.id.tv_nama_obat);
             tvHarga = view.findViewById(R.id.tv_harga);
             tvDeskripsi = view.findViewById(R.id.tv_deskripsi_obat);
             imgObat = view.findViewById(R.id.img_obat);
+            btnCart = view.findViewById(R.id.btn_cart);
         }
     }
 

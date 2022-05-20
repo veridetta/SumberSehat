@@ -48,6 +48,7 @@
                     android:textStyle="bold"
                     android:text="Rp20.000"/>
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_cart"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:icon="@drawable/shopping_cart"

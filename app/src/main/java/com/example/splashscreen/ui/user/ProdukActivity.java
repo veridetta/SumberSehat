@@ -5,8 +5,11 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.example.splashscreen.R;
 import com.example.splashscreen.db.DBUser;
@@ -21,6 +24,7 @@ public class ProdukActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ObatAdapter obatAdapter;
     private List<ObatModel> obatModelList;
+    private ImageView btnKeranjang;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,8 @@ public class ProdukActivity extends AppCompatActivity {
         setContentView(R.layout.activity_produk);
 
         recyclerView = findViewById(R.id.rc_produk);
+        btnKeranjang = findViewById(R.id.btn_cart);
+
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         obatAdapter = new ObatAdapter();
         recyclerView.setAdapter(obatAdapter);

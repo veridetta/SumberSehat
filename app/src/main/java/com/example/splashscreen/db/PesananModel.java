@@ -5,6 +5,8 @@ import androidx.room.Entity;
 import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
+import java.util.StringJoiner;
+
 @Entity (tableName = "pesanan_table")
 public class PesananModel {
     @PrimaryKey(autoGenerate = true)
@@ -15,23 +17,27 @@ public class PesananModel {
     public String id_obat;
     @ColumnInfo(name = "kuantitas")
     public String kuantitas;
+    @ColumnInfo(name = "harga")
+    public String harga;
     @ColumnInfo(name = "status")
     public String status;
 
 
-    public PesananModel(int id, String id_user, String id_obat, String kuantitas, String status){
+    public PesananModel(int id, String id_user, String id_obat, String harga, String kuantitas, String status){
         this.id = id;
         this.id_user = id_user;
         this.id_obat = id_obat;
         this.kuantitas = kuantitas;
+        this.harga = harga;
         this.status = status;
 
     }
     @Ignore
-    public PesananModel( String id_user, String id_obat, String kuantitas, String status){
+    public PesananModel(String id_user, String id_obat, String kuantitas, String harga, String status){
         this.id_user = id_user;
         this.id_obat = id_obat;
         this.kuantitas = kuantitas;
+        this.harga = harga;
         this.status = status;
     }
 }

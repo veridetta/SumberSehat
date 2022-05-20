@@ -17,7 +17,7 @@ import com.example.splashscreen.ui.MainActivity;
 public class SplashActivity extends AppCompatActivity {
 
     Intent intent;
-
+    DBUser dbUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     void initAdmin(){
-        DBUser dbUser = DBUser.getInstance(this);
+         dbUser = DBUser.getInstance(this);
 
         if(dbUser.userDao().getAdmin("admin")!=null){
 
@@ -47,14 +47,7 @@ public class SplashActivity extends AppCompatActivity {
         if(dbUser.obatDao().getObatAll()!=null){
 
         }else{
-            //input obat ke database jika tidak ada obat
-            dbUser.obatDao().insertObat(new ObatModel("asmasolon", "4000","asma",
-                    "https://miro.medium.com/focal/92/92/50/50/1*QPllkvDm_lXdVPekf6Rugw.jpeg",
-                    "-","10"));
-
-            dbUser.obatDao().insertObat(new ObatModel("neo napacin", "5000","asma",
-                    "https://miro.medium.com/focal/92/92/50/50/1*QPllkvDm_lXdVPekf6Rugw.jpeg",
-                    "-","10"));
+            tambahObat();
         }
 
         if(isLogin){
@@ -96,5 +89,19 @@ public class SplashActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         },2000);
+    }
+    void tambahObat(){
+        //input obat ke database jika tidak ada obat
+        dbUser.obatDao().insertObat(new ObatModel("asmasolon", "4000","asma",
+                "https://miro.medium.com/focal/92/92/50/50/1*QPllkvDm_lXdVPekf6Rugw.jpeg",
+                "-","10"));
+
+        dbUser.obatDao().insertObat(new ObatModel("neo napacin", "5000","asma",
+                "https://miro.medium.com/focal/92/92/50/50/1*QPllkvDm_lXdVPekf6Rugw.jpeg",
+                "-","10"));
+        dbUser.obatDao().insertObat(new ObatModel("neo napacin 2", "5000","asma",
+                "https://cdn0-production-images-kly.akamaized.net/MXuUWdw3wsbcd2U1jqIwPyMZAwI=/640x360/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3172766/original/024217600_1594118560-20-mg-label-blister-pack-208512__3_.jpg",
+                "-","10"));
+
     }
 }

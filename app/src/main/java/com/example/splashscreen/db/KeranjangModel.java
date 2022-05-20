@@ -15,18 +15,23 @@ public class KeranjangModel {
     public String id_user;
     @ColumnInfo(name = "kuantitas")
     public String kuantitas;
+    @ColumnInfo(name = "harga")
+    public String harga;
 
 
-    public KeranjangModel(int id, String id_obat, String id_user, String kuantitas){
+    public KeranjangModel(int id, String id_obat, String id_user, String kuantitas, String harga){
         this.id = id;
         this.id_obat =id_obat;
         this.id_user = id_user;
         this.kuantitas = kuantitas;
+        this.harga = harga;
     }
     @Ignore
-    public KeranjangModel(String id_obat,String id_user, String kuantitas){
+    public KeranjangModel(String id_obat,String id_user, String kuantitas, String harga){
         this.id_obat =id_obat;
         this.id_user = id_user;
         this.kuantitas = kuantitas;
+        this.harga = harga;
     }
+
 }
